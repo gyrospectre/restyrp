@@ -15,9 +15,9 @@ services:
       - OID_REDIRECT_PATH=/redirect_uri
       - OID_DISCOVERY=http://192.168.99.100:8080/auth/realms/master/.well-known/openid-configuration
       - OID_CLIENT_ID=proxy
-      - OID_CLIENT_SECRET=dee59d02-b1a9-455a-bd3c-38d2e060bf0f
+      - OID_CLIENT_SECRET=71f09675-bf22-4082-8807-1d7635527554
 
-      - PROXY_HOST=192.168.99.100
+      - PROXY_HOST=192.168.1.4
       - PROXY_PORT=8383
       - PROXY_PROTOCOL=http
     network_mode: bridge
@@ -29,4 +29,9 @@ services:
     environment:
     - KEYCLOAK_USER=admin
     - KEYCLOAK_PASSWORD=admin
+    - KEYCLOAK_IMPORT=/tmp/realm.json
+
+    volumes:
+      - ./keycloak/realm.json:/tmp/realm.json
+
     network_mode: bridge
