@@ -12,7 +12,7 @@ done
 echo " \e[32mdone\e[39m"
 
 # Create initial user
-echo -n "Creating inital app user ..."
+echo -n "Creating initial app user ..."
 sudo docker exec -it restyrp_keycloak_1 /opt/jboss/keycloak/bin/kcadm.sh create users -r rp -s username=testuser -s enabled=true --server http://192.168.1.4:8080/auth --realm master --user admin --password admin > /dev/null
 sudo docker exec -it restyrp_keycloak_1 /opt/jboss/keycloak/bin/kcadm.sh set-password -r rp --username testuser --new-password NEWPASSWORD --temporary --server http://192.168.1.4:8080/auth --realm master --user admin --password admin > /dev/null
 echo " \e[32mdone\e[39m"
