@@ -33,5 +33,6 @@ services:
 
     volumes:
       - ./keycloak/realm.json:/tmp/realm.json
+      - ./keycloak/keycloak-bg.png:/opt/jboss/keycloak/themes/keycloak/login/resources/img/keycloak-bg.png
 
     network_mode: bridge
