@@ -245,17 +245,17 @@
     {
       "id": "ff88533c-bb46-4f0d-a3ef-de47e1c4ad4d",
       "clientId": "RP",
-      "rootUrl": "https://192.168.1.9/",
-      "adminUrl": "https://192.168.1.9/",
+      "rootUrl": "https://{{ LOCAL_IP }}/",
+      "adminUrl": "https://{{ LOCAL_IP }}/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://192.168.1.9/*"
+        "https://{{ LOCAL_IP }}/*"
       ],
       "webOrigins": [
-        "https://192.168.1.9"
+        "https://{{ LOCAL_IP }}"
       ],
       "notBefore": 0,
       "bearerOnly": false,

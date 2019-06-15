@@ -17,7 +17,7 @@ services:
       - OID_CLIENT_ID=proxy
       - OID_CLIENT_SECRET=71f09675-bf22-4082-8807-1d7635527554
 
-      - PROXY_HOST=192.168.1.4
+      - PROXY_HOST=192.168.1.9
       - PROXY_PORT=8383
       - PROXY_PROTOCOL=http
     network_mode: bridge
